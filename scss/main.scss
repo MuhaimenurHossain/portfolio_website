@@ -57,7 +57,7 @@ img {
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
@@ -117,6 +117,7 @@ img {
 
 #home {
   &-a {
+    margin-top: 4rem;
 
     .specials {
       margin-top: 3rem;
@@ -134,7 +135,7 @@ img {
       .fas {
         color: $main-color;
         padding-bottom: 0.4rem;
-        background: #666;
+        background: #E0CAA1;
         height: 2.5rem;
         width: 2.5rem;
         line-height: 2.5rem;
@@ -151,7 +152,7 @@ img {
           transform: scale(1.2);
           margin-bottom: 1rem;
           transition: all 0.3s ease-out;
-          box-shadow: #888 -0.2rem -0.2rem;
+          box-shadow: #b3a387 -0.2rem -0.2rem;
         }
       }
     }
@@ -195,6 +196,8 @@ img {
   // Home Section C
 
   &-c {
+    margin: 4rem 0;
+
     .process {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -249,6 +252,8 @@ img {
 // About Sections
 
 #about {
+  margin-top: 4rem;
+
   &-a {
     .about-info {
       display: grid;
@@ -294,6 +299,7 @@ img {
   // About B
 
   &-b {
+    margin-top: 4rem;
     .progress {
       overflow: hidden;
       height: 20px;
