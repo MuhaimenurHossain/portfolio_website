@@ -580,7 +580,8 @@ img {
   #header-home {
     height: 30rem; }
     #header-home .header-content {
-      padding-top: 5rem; } }
+      padding-top: 5rem;
+      padding-bottom: 1rem; } }
 
 @media (max-width: 600px) {
   #main-nav {
@@ -589,7 +590,9 @@ img {
     #main-nav #logo {
       margin: 1rem; }
     #main-nav li {
-      padding: 1rem; }
+      padding: 1rem;
+      font-weight: 700;
+      text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd; }
   #header-home {
     height: 10rem;
     border-bottom: 3px solid #66F;
