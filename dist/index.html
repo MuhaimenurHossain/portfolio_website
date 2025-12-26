@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-  <title>Muhaimenur | Frontend Web Developer</title>
+  <title>Welcome to Muhaimenur's Portfolio</title>
 </head>
 <body>
   <!-- Header -->
@@ -24,8 +24,8 @@
         </ul>
       </nav>
       <div class="header-content">
-        <h1>I am Muhaimenur the <span class="txt-type" data-wait="3000" data-words='["Frontend Developer", "Website Designer", "Aspiring Full-Stack Developer"]'></span></h1>
-        <p>I specialize in website building and editing</p>
+        <h1>I am Muhaimenur, learning <span class="txt-type" data-wait="3000" data-words='["Frontend Development", "Website Design", "Full-Stack Development"]'></span></h1>
+        <p>Total Visitors: <span id="counter">Loading...</span></p>
         <a href="work.html" class="btn-light">View My Work</a>
       </div>
     </div>
@@ -155,5 +155,28 @@
   </footer>
   <!-- Typewriter Script -->
   <script src="js/typewriter.js"></script>
+  <script>
+    // API Gateway to Invoke URL
+    const API_URL = "https://ee9jr41oo2.execute-api.ap-southeast-2.amazonaws.com/default/visitor-couter-function";
+
+    async function getCounter() {
+        try {
+            // Calling the API
+            let response = await fetch(API_URL);
+            
+            // Parsing the response JSON data
+            let data = await response.json();
+            
+            // Updating the count on the webpage
+            document.getElementById('counter').innerText = data.count;
+        } catch (error) {
+            console.error("Error fetching counter:", error);
+            document.getElementById('counter').innerText = "Unavailable";
+        }
+    }
+
+    // Run the function as soon as the page loads
+    window.onload = getCounter();
+</script>
 </body>
 </html>
